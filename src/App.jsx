@@ -23,7 +23,9 @@ export default function App() {
       const inputName = event.target.elements.inputName;
       const newName = String(inputName.value)
       setName([newName]);
-      event.placeholder = "name";
+      inputName.value = "";
+      inputName.focus();
+      event.elements.placeholder = "name";
     }
 
     function handleClick(){
